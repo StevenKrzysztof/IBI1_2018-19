@@ -99,6 +99,63 @@ plt.title('Limit circle')
 plt.show()
 
 #------------question 5------------------#
+import xml.dom.minidom
+import re
+import random
+file='D:\zju intl\IBI\github steven\IBI1_2018-19\practical13\predator-prey.xml'
+DOMTree = xml.dom.minidom.parse('D:\zju intl\IBI\github steven\IBI1_2018-19\practical13\predator-prey.xml')
+collection = DOMTree.documentElement
+genes = collection.getElementsByTagName("parametername")
+# use elementtree to find parametername 
+# Element.set(key, value) to change elements:k predator breeds, k predator dies, k prey breeds, k prey dies.
+# choose value by yourself for the 4 elements.
+# ElementTree.write('filename.xml') to write new xml file
+# use pyplot to make plot
+import numpy
+import re 
+import matplotlib.pyplot as plt
+# result = open new file
+result = result.readlines()
+name = []
+resultdata = []
+count = 0
+for line in result:
+    if count == 0:
+        name = re.split(r',+',line)
+        count=1                
+    else:
+        time = re.split(r',+',line)
+        del(time[0])        
+        resultdata.append(time)
+     
 
+results = numpy.array(resultdata)
 
+results = results.astype(numpy.float)
 
+plt.plot(results[:,0],label='Predator (b=0.02, d=0.4)')
+plt.plot(results[:,1],label='Prey (b=0.1, d=0.02)')
+plt.xlabel('time')
+plt.ylabel('population size')
+plt.title('Time course')
+plt.legend()
+plt.show()
+
+#------------question 6-----------------#
+
+file='D:\zju intl\IBI\github steven\IBI1_2018-19\practical13\predator-prey.xml'
+DOMTree = xml.dom.minidom.parse('D:\zju intl\IBI\github steven\IBI1_2018-19\practical13\predator-prey.xml')
+collection = DOMTree.documentElement
+genes = collection.getElementsByTagName("parametername")
+
+time = 0
+while time <= 99:
+    # use elementtree to find parametername 
+    # Element.set(key, value) to change elements:k predator breeds, k predator dies, k prey breeds, k prey dies.
+    value=[random.randint(0,1) for _ in range(4)]
+    #value[0] for predator breeds ; value[1] for predator dies ; value[2] for prey breeds ; value[3] for pre dies
+    # ues random.randint to choose a random number for the 4 elements.
+
+    time = time + 1
+    
+# plot as before for 100 times.
