@@ -84,8 +84,8 @@ results = numpy.array(resultdata)
 
 results = results.astype(numpy.float)
 
-plt.plot(results[:,0],label='Predator (b=0.02, d=0.4)')
-plt.plot(results[:,1],label='Prey (b=0.1, d=0.02)')
+plt.plot(results[:,0],label='Predator')
+plt.plot(results[:,1],label='Prey')
 plt.xlabel('time')
 plt.ylabel('population size')
 plt.title('Time course')
@@ -105,8 +105,10 @@ import random
 file='D:\zju intl\IBI\github steven\IBI1_2018-19\practical13\predator-prey.xml'
 DOMTree = xml.dom.minidom.parse('D:\zju intl\IBI\github steven\IBI1_2018-19\practical13\predator-prey.xml')
 collection = DOMTree.documentElement
-parameter = collection.getElementsByTagName("parametername")
-for parameter in parametername:
+parameters = collection.getElementsByTagName("parametername")
+parameterall = ['k predator breeds', 'k predator dies', 'k prey breeds', 'k prey dies']
+for parameter in parameters:
+    for k in parameterall:
 # use elementtree to find parametername 
 # Element.set(key, value) to change elements:k predator breeds, k predator dies, k prey breeds, k prey dies.
 # choose value by yourself for the 4 elements.
@@ -137,9 +139,9 @@ results = results.astype(numpy.float)
 
 plt.plot(results[:,0],label='Predator (b=0.02, d=0.4)')
 plt.plot(results[:,1],label='Prey (b=0.1, d=0.02)')
-plt.xlabel('time')
-plt.ylabel('population size')
-plt.title('Time course')
+plt.xlabel('predator population')
+plt.ylabel('prey population')
+plt.title('limit cycle')
 plt.legend()
 plt.show()
 
