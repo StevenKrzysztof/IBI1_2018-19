@@ -1,0 +1,5 @@
+The practical was hard to do. I enjoyed on doing mathmatical calculation on expression the susceptible and recovered people.
+I also got to know how to select a random people and express area infection in python.
+I learnt many plotting skills and think how things could be different when minus number exists.
+The most important thing I learnt is to use array and plot to express infection in population. ( And from my classmate's code
+I saw how can we make gif by python). 

@@ -1,0 +1,3 @@
+I used exp in my code to calculate the result. First we need to dudge the operators and use for loop to find possible 
+ combinatorics about how to make them 24. I also added () in the algorithm to make combinatorics more plentiful.
+Then global count is used to find recursion times (each pick up 2 elements in numbers to test possible calculation). 

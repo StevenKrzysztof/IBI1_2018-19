@@ -1,0 +1,6 @@
+To use GitKraken, we could do version control, e.g., save versions of our codes or work, and make further improvement. 
+We could also see what difference we made on each step.
+To merge branches make it possible for us to work together and do peer correction.
+For github, I found it difficult in "fork" and get the documents in my own GitKraken, because the internet connection did not
+seem to be well, and I spent a lot of time waiting. But this is truely useful function because it allow us to see other's work
+on GitHub.
