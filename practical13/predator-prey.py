@@ -105,12 +105,14 @@ import random
 file='D:\zju intl\IBI\github steven\IBI1_2018-19\practical13\predator-prey.xml'
 DOMTree = xml.dom.minidom.parse('D:\zju intl\IBI\github steven\IBI1_2018-19\practical13\predator-prey.xml')
 collection = DOMTree.documentElement
-genes = collection.getElementsByTagName("parametername")
+parameter = collection.getElementsByTagName("parametername")
+for parameter in parametername:
 # use elementtree to find parametername 
 # Element.set(key, value) to change elements:k predator breeds, k predator dies, k prey breeds, k prey dies.
 # choose value by yourself for the 4 elements.
 # ElementTree.write('filename.xml') to write new xml file
 # use pyplot to make plot
+
 import numpy
 import re 
 import matplotlib.pyplot as plt
